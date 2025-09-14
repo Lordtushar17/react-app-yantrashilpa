@@ -1,25 +1,44 @@
 import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import Header from "./components/Header";
+import Footer from "./components/Footer";
+
 import HeroSection from "./components/HeroSection";
 import WhoWeAre from "./components/WhoWeAre";
 import StatsSection from "./components/StatsSection";
 import WeProvide from "./components/WeProvide";
 import ProductsSection from "./components/ProductsSection";
 import OurValues from "./components/OurValues";
-import Footer from "./components/Footer";
+
+// pages
+import ProductsPage from "./pages/ProductsPage";
+import ContactPage from "./pages/ContactPage";
+
+const Home: React.FC = () => (
+  <>
+    <HeroSection />
+    <WhoWeAre />
+    <StatsSection />
+    <WeProvide />
+    <ProductsSection />  {/* shows only 2 products + "View More" */}
+    <OurValues />
+  </>
+);
 
 function App() {
   return (
-    <div>
+    <Router>
       <Header />
-      <HeroSection />
-      <WhoWeAre />
-      <StatsSection />
-      <WeProvide />
-      <ProductsSection />
-      <OurValues />
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/products" element={<ProductsPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+      </Routes>
+
       <Footer />
-    </div>
+    </Router>
   );
 }
 
