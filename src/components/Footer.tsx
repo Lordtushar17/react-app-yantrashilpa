@@ -87,7 +87,7 @@ const Footer: React.FC = () => {
       {/* Bottom Section with Divider */}
       <div className="bg-gray-800 text-gray-400 py-4 border-t border-gray-700">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-sm">
-          <p>© All rights reserved 2022 Yantrashilpa</p>
+          <p>© All rights reserved 2025 Yantrashilpa</p>
           <div className="flex space-x-4 mt-2 md:mt-0">
             <button className="hover:text-white">Privacy Policy</button>
             <button className="hover:text-white">Terms & Conditions</button>
