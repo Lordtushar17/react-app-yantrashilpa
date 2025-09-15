@@ -29,18 +29,31 @@ const values: Value[] = [
 
 const OurValues: React.FC = () => {
   return (
-    <section className="py-16 bg-gray-100 text-gray-900 text-center">
-      <h2 className="text-3xl font-bold mb-12">Our Values</h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+    <section className="py-20 bg-gray-100 text-gray-900 text-center">
+      <div className="relative inline-block mb-12 group">
+        <h2 className="text-3xl font-bold p-4 rounded-lg text-white bg-gradient-to-r from-blue-700 via-orange-400 to-orange-300 relative z-10">
+          Our Values
+        </h2>
+
+        {/* Glow effect */}
+        <div className="absolute inset-0 -m-1 rounded-lg bg-gradient-to-r from-blue-500 via-orange-300 to-orange-200 opacity-0 group-hover:opacity-75 blur-none group-hover:blur-md z-0 transition-all duration-500 animate-pulse"></div>
+
+        {/* Subtle highlight effect */}
+        <div className="absolute inset-0 -m-0.5 rounded-lg border-2 border-transparent group-hover:border-orange-200 z-0 transition-colors duration-500"></div>
+
+        {/* Outer shadow for depth */}
+        <div className="absolute inset-0 rounded-lg shadow-none group-hover:shadow-xl group-hover:shadow-orange-300/50 z-0 transition-shadow duration-500"></div>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-7xl mx-auto px-6">
         {values.map((value, idx) => (
-          //pop effect on hover
-          //fade in background image on hover
-          //text over image with white background and some opacity
+          // pop effect on hover
+          // fade in background image on hover
+          // text over image with white background and some opacity
           <div
             key={idx}
-            className="relative group rounded-lg overflow-hidden shadow transition-transform duration-300 transform hover:shadow-2xl hover:scale-110"
+            className="relative group rounded-lg overflow-hidden shadow transition-transform duration-300 transform hover:shadow-2xl hover:scale-110 flex flex-col md:min-h-[400px]"
           >
-
             {/* Background Image */}
             <div
               className="absolute inset-0 bg-cover bg-center opacity-40 group-hover:opacity-85 transition-opacity duration-300"
@@ -48,9 +61,11 @@ const OurValues: React.FC = () => {
             ></div>
 
             {/* Text Content */}
-            <div className="relative bg-white/35 p-6 rounded-lg">
-              <h3 className="text-xl font-bold mb-2">{value.title}</h3>
-              <p>{value.description}</p>
+            <div className="relative bg-white/35 p-6 rounded-lg m-6 flex-1 flex flex-col">
+              <h3 className="text-2xl md:text-3xl font-bold mb-2 transition-colors duration-300 group-hover:text-blue-700">
+                {value.title}
+              </h3>
+              <p className="text-lg leading-relaxed">{value.description}</p>
             </div>
           </div>
         ))}

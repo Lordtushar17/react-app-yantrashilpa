@@ -6,7 +6,7 @@ const WhoWeAre = () => {
       {/* Title with box, glow, and shadow */}
       <h2
         className="inline-block px-6 py-3 rounded-2xl
-                   bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600
+                   bg-gradient-to-r from-orange-400 via-orange-500 to-blue-900
                    text-white font-bold text-4xl md:text-5xl
                    shadow-lg hover:shadow-[0_0_30px_rgba(59,130,246,0.7)]
                    hover:drop-shadow-[0_0_40px_rgba(59,130,246,0.8)]

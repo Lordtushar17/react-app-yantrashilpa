@@ -9,13 +9,13 @@ const Header: React.FC = () => {
         <div className="flex items-center space-x-6">
           {/* Logo (click navigates to homepage) */}
           <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-            <img src="/company-logo-header.png" alt="Yantrashilpa Logo" className="h-10 w-auto cursor-pointer" />
+            <img src="/footer-logo.png" alt="Yantrashilpa Logo" className="h-10 w-auto cursor-pointer" />
           </Link>
 
           {/* Contact info (hidden on small screens) */}
           <div className="hidden md:flex space-x-4 text-sm text-gray-300">
             <span>📧 info@yantrashilpa.com</span>
-            <span>📞 +91 98765 43210</span>
+            <span>📞 +91 9112211150</span>
           </div>
         </div>
 
@@ -23,15 +23,18 @@ const Header: React.FC = () => {
         <nav>
           <ul className="flex space-x-6 text-sm font-medium">
             <li>
-              <NavLink 
-                to="/" 
+              <NavLink
+                to="/"
                 end
-                className={({ isActive }) => (isActive ? "text-green-400" : "hover:text-green-400")}
+                onClick={() => window.scrollTo({ top: 0, left: 0, behavior: "smooth" })}
+                className={({ isActive }) =>
+                  isActive ? "text-orange-500" : "hover:text-orange-500"
+                }
               >
                 Home
               </NavLink>
-
             </li>
+
 
             {/* About links to home + anchor: use pathname + hash */}
             <li>
@@ -42,7 +45,7 @@ const Header: React.FC = () => {
                       document.getElementById("about")?.scrollIntoView({ behavior:              "smooth" });
                     }, 100); // wait for navigation
                   }}
-                  className="hover:text-green-400"
+                  className="hover:text-orange-500"
                 >
                   About Us
                 </NavLink>
@@ -50,13 +53,13 @@ const Header: React.FC = () => {
 
 
             <li>
-              <NavLink to="/products" className={({ isActive }) => (isActive ? "text-green-400" : "hover:text-green-400")}>
+              <NavLink to="/products" className={({ isActive }) => (isActive ? "text-orange-400" : "hover:text-orange-500")}>
                 Products
               </NavLink>
             </li>
 
             <li>
-              <NavLink to="/contact" className={({ isActive }) => (isActive ? "text-green-400" : "hover:text-green-400")}>
+              <NavLink to="/contact" className={({ isActive }) => (isActive ? "text-orange-400" : "hover:text-orange-500")}>
                 Contact
               </NavLink>
             </li>

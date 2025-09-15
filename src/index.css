@@ -21,4 +21,13 @@
   animation: subtleGlow 4s infinite alternate;
 }
 
+@font-face {
+  font-family: "LucidaHandwritingStdLight";
+  src: url("./assets/fonts/LucidaHandwritingStdLight.TTF") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
 

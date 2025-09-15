@@ -1,9 +1,9 @@
 import React from "react";
 
 const stats = [
-  { number: "1415", label: "Systems Installed" },
-  { number: "45", label: "Happy Clients" },
-  { number: "30", label: "Patents/Designs" },
+  { number: "1500+", label: "Systems Installed" },
+  { number: "50+", label: "Happy Clients" },
+  { number: "30", label: "Designs & Patents" },
 ];
 
 const StatsSection = () => {

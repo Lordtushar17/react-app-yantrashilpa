@@ -1,5 +1,5 @@
 import React from "react";
-import { FaInstagram, FaLinkedin, FaFacebook, FaTwitter, FaYoutube } from "react-icons/fa";
+import { FaInstagram, FaLinkedin, FaTwitter, FaYoutube } from "react-icons/fa";
 import { IconType } from "react-icons";
 
 interface SocialIconProps {
@@ -45,15 +45,15 @@ const Footer: React.FC = () => {
   </div>
 
   {/* Center: Phone & Email */}
-  <div className="mb-8 md:mb-0 md:w-1/1 flex flex-col space-y-2 text-sm">
+  <div className="mb-8 md:mb-0 md:w-1/1 flex flex-col space-y-2 text-sm ">
     {/* Phone Numbers Box */}
     <div className="bg-gray-800 p-3 rounded-md shadow-sm">
-      <p>Phone: +91-1234567890</p>
-      <p>Phone: +91-0987654321</p>
+      <p>Phone: +91-9112211150</p>
+      <p>Phone: +91-9112211140</p>
     </div>
 
     {/* Email IDs Box */}
-    <div className="bg-gray-800 p-3 rounded-md shadow-sm">
+    <div className="bg-gray-800 p-3 rounded-md shadow-sm ">
       <p>Email: info@yantrashilpa.com</p>
       <p>Email: support@yantrashilpa.com</p>
     </div>
@@ -66,17 +66,18 @@ const Footer: React.FC = () => {
     <p>Thursday: Off</p>
 
     <div className="flex mt-4 space-x-4 text-2xl">
-      <SocialIcon icon={FaInstagram} label="Instagram" color="text-pink-500" />
+      
       <a
   href="https://in.linkedin.com/company/yantrashilpa-technologies-private-limited"
   target="_blank"
-  rel="noopener noreferrer"
->
+  rel="noopener noreferrer">
   <SocialIcon icon={FaLinkedin} label="LinkedIn" color="text-blue-500" />
 </a>
 
-      <SocialIcon icon={FaFacebook} label="Facebook" color="text-blue-700" />
+
+
       <SocialIcon icon={FaTwitter} label="Twitter" color="text-blue-400" />
+      <SocialIcon icon={FaInstagram} label="Instagram" color="text-pink-500" />
       <SocialIcon icon={FaYoutube} label="YouTube" color="text-red-600" />
     </div>
   </div>
