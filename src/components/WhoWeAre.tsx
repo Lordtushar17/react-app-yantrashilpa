@@ -15,7 +15,7 @@ const WhoWeAre = () => {
         Who We Are
       </h2>
 
-      <p className="max-w-3xl mx-auto text-lg md:text-xl leading-relaxed text-gray-800">
+      <p className="max-w-3xl mx-auto text-lg md:text-xl leading-relaxed text-gray-800 text-justify">
         The strong design oriented organization known today as Yantrashilpa evolved from a solid technical and administrative support base. The origins of its Engine testing equipments often trace back to the SPM’s and test-rigs for ballistic applications, designed by founder in the late 90's.
         <br /><br />
         Since then Yantrashilpa is one of the leading companies with proven ability to deliver innovative products that span traditional and next-generation requirements.

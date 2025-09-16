@@ -65,7 +65,7 @@ const OurValues: React.FC = () => {
               <h3 className="text-2xl md:text-3xl font-bold mb-2 transition-colors duration-300 group-hover:text-blue-700">
                 {value.title}
               </h3>
-              <p className="text-lg leading-relaxed">{value.description}</p>
+              <p className="text-lg leading-relaxed text-justify">{value.description}</p>
             </div>
           </div>
         ))}
