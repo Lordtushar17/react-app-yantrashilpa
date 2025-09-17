@@ -1,21 +1,26 @@
 import React from "react";
 
 const clients = [
-  { id: 1, name: "Client 1", logo: "/images/clients/client1.png" },
-  { id: 2, name: "Client 2", logo: "/images/clients/client2.png" },
-  { id: 3, name: "Client 3", logo: "/images/clients/client3.png" },
-  { id: 4, name: "Client 4", logo: "/images/clients/client4.png" },
-  { id: 5, name: "Client 5", logo: "/images/clients/client5.png" },
-  { id: 6, name: "Client 6", logo: "/images/clients/client6.png" },
-  { id: 7, name: "Client 7", logo: "/images/clients/client7.png" },
-  { id: 8, name: "Client 8", logo: "/images/clients/client8.png" },
-  { id: 9, name: "Client 9", logo: "/images/clients/client9.png" },
-  { id: 10, name: "Client 10", logo: "/images/clients/client10.png" },
-  { id: 11, name: "Client 11", logo: "/images/clients/client11.png" },
-  { id: 12, name: "Client 12", logo: "/images/clients/client12.png" },
-  { id: 13, name: "Client 13", logo: "/images/clients/client13.png" },
-  { id: 14, name: "Client 14", logo: "/images/clients/client14.png" },
-  { id: 15, name: "Client 15", logo: "/images/clients/client15.png" },
+  { id: 1, name: "Client 1", logo: "/images/clients/ashok leyland.png" },
+  { id: 2, name: "Client 2", logo: "/images/clients/bajaj.png" },
+  { id: 3, name: "Client 3", logo: "/images/clients/cummins.png" },
+  { id: 4, name: "Client 4", logo: "/images/clients/drdo.png" },
+  { id: 5, name: "Client 5", logo: "/images/clients/kirloskar.webp" },
+  { id: 6, name: "Client 6", logo: "/images/clients/tata.png" },
+  { id: 7, name: "Client 7", logo: "/images/clients/arai.png" },
+  { id: 8, name: "Client 8", logo: "/images/clients/force.png" },
+  { id: 9, name: "Client 9", logo: "/images/clients/caterpillar.png" },
+  { id: 10, name: "Client 10", logo: "/images/clients/indian oil.jpg" },
+  { id: 11, name: "Client 11", logo: "/images/clients/avl.png" },
+  { id: 12, name: "Client 12", logo: "/images/clients/delphi tvs.png" },
+  { id: 13, name: "Client 13", logo: "/images/clients/dynomerk.png" },
+  { id: 14, name: "Client 14", logo: "/images/clients/eicher.png" },
+  { id: 15, name: "Client 15", logo: "/images/clients/mahindra.jpeg" },
+  { id: 16, name: "Client 16", logo: "/images/clients/ford.png" },
+  { id: 17, name: "Client 17", logo: "/images/clients/hero.png" },
+  { id: 18, name: "Client 18", logo: "/images/clients/horiba.png" },
+  { id: 19, name: "Client 19", logo: "/images/clients/icat.png" },
+  { id: 20, name: "Client 20", logo: "/images/clients/mitsubishi.png" }
 ];
 
 const ClientsSection = () => {
