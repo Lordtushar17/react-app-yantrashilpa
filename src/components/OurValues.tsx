@@ -31,15 +31,15 @@ const OurValues: React.FC = () => {
   return (
     <section className="py-20 bg-gray-100 text-gray-900 text-center">
       <div className="relative inline-block mb-12 group">
-        <h2 className="text-3xl font-bold p-4 rounded-lg text-white bg-gradient-to-r from-blue-700 via-orange-400 to-orange-300 relative z-10">
+        <h2 className="text-3xl font-bold p-4 rounded-lg text-white bg-gradient-to-r from-orange-400 via-orange-550 to-orange-700 relative z-10">
           Our Values
         </h2>
 
         {/* Glow effect */}
-        <div className="absolute inset-0 -m-1 rounded-lg bg-gradient-to-r from-blue-500 via-orange-300 to-orange-200 opacity-0 group-hover:opacity-75 blur-none group-hover:blur-md z-0 transition-all duration-500 animate-pulse"></div>
+        <div className="absolute inset-0 -m-1 rounded-lg bg-gradient-to-r from-orange-500 via-orange-700 to-orange-400 opacity-0 group-hover:opacity-75 blur-none group-hover:blur-md z-0 transition-all duration-500 animate-pulse"></div>
 
         {/* Subtle highlight effect */}
-        <div className="absolute inset-0 -m-0.5 rounded-lg border-2 border-transparent group-hover:border-orange-200 z-0 transition-colors duration-500"></div>
+        <div className="absolute inset-0 -m-0.5 rounded-lg border-2 border-transparent group-hover:border-blue-400 z-0 transition-colors duration-500"></div>
 
         {/* Outer shadow for depth */}
         <div className="absolute inset-0 rounded-lg shadow-none group-hover:shadow-xl group-hover:shadow-orange-300/50 z-0 transition-shadow duration-500"></div>

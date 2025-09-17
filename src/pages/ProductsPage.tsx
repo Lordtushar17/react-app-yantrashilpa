@@ -11,7 +11,7 @@ interface Product {
 const products: Product[] = [
   {
     id: 1,
-    name: "CCS",
+    name: "Coolant Conditioning System",
     shortDescription:
       "Coolant Conditioning System to provide coolant at controlled temperature, flow rate, and pressure for engine testing.",
     description:
@@ -20,7 +20,7 @@ const products: Product[] = [
   },
   {
     id: 2,
-    name: "CACS",
+    name: "Charged Air Control System",
     shortDescription:
       "Charged Air Control System for regulating turbocharged air temperature and pressure supplied to the engine.",
     description:
@@ -29,16 +29,16 @@ const products: Product[] = [
   },
   {
     id: 3,
-    name: "FCS",
+    name: "Fuel Conditioning System",
     shortDescription:
       "Fuel Conditioning System to maintain temperature, flow rate, and pressure of fuel supplied to the engine.",
     description:
       "The ‘Fuel Conditioning System’ is aimed to maintain the temperature, flow rate, and pressure of the fuel going to the feed pump of the engine constant at a set value. The system controls the temperature of fuel supplied to the engine either by indirect cooling or by heating it. The fuel coming from the main supply line is added to the fuel from the return line of the engine and passes through a heat exchanger coil. A process controller maintains the desired temperature, pressure (and thus flow) of fuel. Thereafter this fuel at the set temperature is supplied to the engine feed pump. The fuel going to the engine feed pump is always in excess. Hence this excess fuel is bypassed and sent to the air separator along with the return line fuel coming from the engine.",
-    images: ["/product-images/FCS 5.webp", "/product-images/FCS 14.webp"],
+    images: ["/product-images/FCS 5.webp", "/product-images/FCS 14.png"],
   },
   {
     id: 4,
-    name: "TSS",
+    name: "Thermal Shock System",
     shortDescription:
       "Thermal Shock System to deliver hot and cold coolant cycles for durability testing of engines.",
     description:
@@ -47,7 +47,7 @@ const products: Product[] = [
   },
   {
     id: 5,
-    name: "OCS",
+    name: "Oil Conditioning System",
     shortDescription:
       "Oil Conditioning System for controlling engine lubricating oil temperature, pressure, and flow.",
     description:
@@ -90,7 +90,25 @@ const ProductsPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50 p-8 pt-24">
       {/* Page heading */}
-      <h1 className="text-4xl font-bold text-center mb-10">Our Products</h1>
+      {/* Page heading with Glow Effect */}
+<div className="mx-auto mb-10 w-fit text-center">
+  <div className="relative inline-block group">
+    {/* Actual Title */}
+    <h1 className="text-3xl md:text-4xl font-bold p-4 rounded-lg text-white bg-gradient-to-r from-orange-400 to-orange-700 relative z-10">
+      Our Products
+    </h1>
+
+    {/* Blue Glow effect */}
+    <div className="absolute inset-0 -m-1 rounded-lg bg-gradient-to-r from-orange-400 to-orange-600 opacity-0 group-hover:opacity-75 blur-none group-hover:blur-md z-0 transition-all duration-500 animate-pulse"></div>
+
+    {/* Subtle Highlight effect */}
+    <div className="absolute inset-0 -m-0.5 rounded-lg border-2 border-transparent group-hover:border-blue-200 z-0 transition-colors duration-500"></div>
+
+    {/* Outer Shadow for depth */}
+    <div className="absolute inset-0 rounded-lg shadow-none group-hover:shadow-xl group-hover:shadow-blue-500/50 z-0 transition-shadow duration-500"></div>
+  </div>
+</div>
+
 
       {/* Products list (vertical, ordered as requested) */}
       <div className="max-w-4xl mx-auto flex flex-col gap-10">
@@ -103,16 +121,21 @@ const ProductsPage: React.FC = () => {
             onKeyDown={(e) => {
               if (e.key === "Enter" || e.key === " ") openProduct(product);
             }}
-            className="cursor-pointer flex flex-col bg-white rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-orange-400"
+            className="cursor-pointer flex flex-col md:flex-row-reverse bg-white rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-orange-400"
           >
-            <img
-              src={product.images[0]}
-              alt={product.name}
-              className="w-full h-64 object-cover"
-              loading="lazy"
-            />
-            <div className="flex-1 flex flex-col p-6 text-left">
-              <h2 className="text-2xl font-semibold mb-3">{product.name}</h2>
+            {/* Image (right on md+, stacked on mobile) */}
+            <div className="md:w-1/2 w-full h-64 md:h-auto flex-shrink-0">
+              <img
+                src={product.images[0]}
+                alt={product.name}
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
+
+            {/* Text (left on md+, stacked below on mobile) */}
+            <div className="flex-1 flex flex-col p-6 text-left md:w-1/2">
+              <h2 className="text-3xl font-bold mb-3">{product.name}</h2>
               {/* short description on the card, truncated to a couple of lines */}
               <p className="text-gray-600 line-clamp-3">{product.shortDescription}</p>
             </div>
@@ -135,66 +158,65 @@ const ProductsPage: React.FC = () => {
           />
 
           {/* panel */}
-          <div className="relative z-50 w-full max-w-6xl mx-4 md:mx-8 bg-white rounded-xl overflow-hidden shadow-xl">
-            <div className="flex flex-col md:flex-row">
-              {/* LEFT: slider */}
-              {/* LEFT: slider */}
-<div className="md:w-2/3 bg-white flex flex-col items-center justify-center relative">
-  <div className="w-full flex items-center justify-center p-4">
-    <button
-      onClick={prevSlide}
-      aria-label="Previous image"
-      className="absolute left-2 top-1/2 -translate-y-1/2 z-20 rounded-full bg-white/80 hover:bg-white p-2 shadow"
-    >
-      ‹
-    </button>
+          <div className="relative z-50 w-full max-w-6xl mx-4 md:mx-8 bg-white rounded-xl overflow-hidden shadow-xl max-h-[90vh]">
+            {/* make layout column on small screens, row on md+, full height so children can scroll */}
+            <div className="flex flex-col md:flex-row h-full">
+              {/* LEFT: slider (on small screens this is top; on md+ it's left) */}
+              <div className="md:w-2/3 w-full bg-white flex flex-col items-center justify-center relative overflow-auto">
+                <div className="w-full flex items-center justify-center p-4">
+                  <button
+                    onClick={prevSlide}
+                    aria-label="Previous image"
+                    className="absolute left-2 top-1/2 -translate-y-1/2 z-20 rounded-full bg-black/40 hover:bg-black/70 p-2 shadow"
+                  >
+                    ‹
+                  </button>
 
-    <img
-      src={selectedProduct.images[slideIndex]}
-      alt={`${selectedProduct.name} view ${slideIndex + 1}`}
-      className="max-h-[70vh] w-auto object-contain bg-white" // <- added bg-white behind images
-      loading="lazy"
-      decoding="async" // hint for faster rendering
-    />
+                  <img
+                    src={selectedProduct.images[slideIndex]}
+                    alt={`${selectedProduct.name} view ${slideIndex + 1}`}
+                    className="max-h-[60vh] md:max-h-[70vh] w-auto max-w-full object-contain bg-white"
+                    loading="lazy"
+                    decoding="async"
+                  />
 
-    <button
-      onClick={nextSlide}
-      aria-label="Next image"
-      className="absolute right-2 top-1/2 -translate-y-1/2 z-20 rounded-full bg-white/80 hover:bg-white p-2 shadow"
-    >
-      ›
-    </button>
-  </div>
+                  <button
+                    onClick={nextSlide}
+                    aria-label="Next image"
+                    className="absolute right-2 top-1/2 -translate-y-1/2 z-20 rounded-full bg-black/40 hover:bg-black/70 p-2 shadow"
+                  >
+                    ›
+                  </button>
+                </div>
 
-  {selectedProduct.images.length > 1 && (
-    <div className="w-full py-3 px-4 bg-gray-100 flex items-center justify-center gap-3 overflow-x-auto">
-      {selectedProduct.images.map((img, i) => (
-        <button
-          key={img + i}
-          onClick={() => goToSlide(i)}
-          className={`rounded-md overflow-hidden border-2 focus:outline-none ${
-            i === slideIndex ? "border-orange-400" : "border-transparent"
-          }`}
-          aria-label={`Show image ${i + 1}`}
-        >
-          <img
-            src={img}
-            alt={`${selectedProduct.name} thumbnail ${i + 1}`}
-            className="h-16 w-24 object-cover bg-white"
-            loading="lazy"
-            decoding="async"
-          />
-        </button>
-      ))}
-    </div>
-  )}
-</div>
+                {selectedProduct.images.length > 1 && (
+                  <div className="w-full py-3 px-4 bg-gray-100 flex items-center justify-center gap-3 overflow-x-auto">
+                    {selectedProduct.images.map((img, i) => (
+                      <button
+                        key={img + i}
+                        onClick={() => goToSlide(i)}
+                        className={`rounded-md overflow-hidden border-2 focus:outline-none ${
+                          i === slideIndex ? "border-orange-400" : "border-transparent"
+                        }`}
+                        aria-label={`Show image ${i + 1}`}
+                      >
+                        <img
+                          src={img}
+                          alt={`${selectedProduct.name} thumbnail ${i + 1}`}
+                          className="h-18 w-24 object-cover bg-white"
+                          loading="lazy"
+                          decoding="async"
+                        />
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </div>
 
-
-              {/* RIGHT: details (justified full description) */}
-              <aside className="md:w-1/3 max-h-[80vh] overflow-y-auto p-6 flex flex-col">
-                <div className="flex items-center justify-between mb-4">
-                  <h3 className="text-xl font-semibold">{selectedProduct.name}</h3>
+              {/* RIGHT: details (on small screens this is below; on md+ it's right) */}
+              <aside className="md:w-1/3 w-full md:max-h-[80vh] max-h-[40vh] overflow-y-auto p-6 flex flex-col">
+                <div className="flex items-center justify-between mb-8">
+                  <h3 className="text-3x1 font-bold">{selectedProduct.name}</h3>
                   <button
                     onClick={closeProduct}
                     className="text-gray-500 hover:text-gray-800"
@@ -204,7 +226,7 @@ const ProductsPage: React.FC = () => {
                   </button>
                 </div>
 
-                <div className="prose prose-sm max-w-none text-gray-700 text-justify">
+                <div className="prose prose-sm max-w-none text-gray-700 text-justify font-bold">
                   <p>{selectedProduct.description}</p>
                 </div>
               </aside>

@@ -9,7 +9,7 @@ const stats = [
 const StatsSection = () => {
   return (
     <section
-      className="relative bg-gray-700 text-white py-16 bg-cover bg-center"
+      className="relative bg-gray-700 text-white py-16 bg-cover bg-center bg-fixed"
       style={{ backgroundImage: "url('/images/pic1.jpeg')", backgroundPosition: "center 30%" }}
     >
       {/* Overlay */}

@@ -10,6 +10,7 @@ import StatsSection from "./components/StatsSection";
 import WeProvide from "./components/WeProvide";
 import ProductsSection from "./components/ProductsSection";
 import OurValues from "./components/OurValues";
+import ClientsSection from "./components/ClientsSection";
 
 // pages
 import ProductsPage from "./pages/ProductsPage";
@@ -21,8 +22,10 @@ const Home: React.FC = () => (
     <WhoWeAre />
     <StatsSection />
     <WeProvide />
-    <ProductsSection />  {/* shows only 2 products + "View More" */}
+    <ProductsSection /> 
+    <ClientsSection/> 
     <OurValues />
+    
   </>
 );
 

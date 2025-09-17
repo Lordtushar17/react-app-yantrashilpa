@@ -7,11 +7,23 @@ const ContactPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gray-100 p-8 pt-24 flex flex-col items-center">
-      {/* Title Box */}
-      <div className="mb-12 px-8 py-6 rounded-2xl text-center bg-gradient-to-r from-orange-400 via-orange-500 to-blue-900 shadow-[0_0_20px_rgba(255,165,0,0.5)] hover:shadow-[0_0_30px_rgba(255,165,0,0.7)] transition-all">
-        <h1 className="text-4xl md:text-5xl font-bold text-white drop-shadow-[0_0_10px_white]">
-          Contact Us
-        </h1>
+      {/* Title with Glow Effect */}
+      <div className="mb-12 text-center">
+        <div className="relative inline-block group">
+          {/* Actual Title */}
+          <h1 className="text-4xl md:text-5xl font-bold p-4 rounded-lg text-white bg-gradient-to-r from-orange-400 to-orange-700 relative z-10">
+            Contact Us
+          </h1>
+
+          {/* Blue Glow effect */}
+          <div className="absolute inset-0 -m-1 rounded-lg bg-gradient-to-r from-orange-400 to-orange-600 opacity-0 group-hover:opacity-75 blur-none group-hover:blur-md z-0 transition-all duration-500 animate-pulse"></div>
+
+          {/* Subtle Highlight effect */}
+          <div className="absolute inset-0 -m-0.5 rounded-lg border-2 border-transparent group-hover:border-blue-200 z-0 transition-colors duration-500"></div>
+
+          {/* Outer Shadow for depth */}
+          <div className="absolute inset-0 rounded-lg shadow-none group-hover:shadow-xl group-hover:shadow-blue-500/50 z-0 transition-shadow duration-500"></div>
+        </div>
       </div>
 
       {/* Info Boxes */}
@@ -20,8 +32,18 @@ const ContactPage: React.FC = () => {
           <h2 className="text-2xl md:text-3xl font-bold mb-2 text-orange-500 text-center ">
             Email
           </h2>
-          <p className="text-gray-700 text-lg">info@yantrashilpa.com</p>
-          <p className="text-gray-700 text-lg">support@yantrashilpa.com</p>
+          <p className="text-gray-700 text-lg">
+            New System - info@yantrashilpa.com
+          </p>
+          <p className="text-gray-700 text-lg">
+            Support and Existing Systems - support@yantrashilpa.com
+          </p>
+          <p className="text-gray-700 text-lg">
+            Sparse - dispatch@yantrashilpa.com
+          </p>
+          <p className="text-gray-700 text-lg">
+            Carrers - hr@yantrashilpa.com
+          </p>
         </div>
 
         <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition text-center font-bold">
@@ -34,16 +56,16 @@ const ContactPage: React.FC = () => {
 
         <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition">
           <h2 className="text-2xl md:text-3xl font-bold mb-2 text-orange-500 text-center">
-              Address
+            Address
           </h2>
           <p className="text-gray-700 text-lg text-center font-bold">
-              Yantrashilpa Technologies Pvt. Ltd.<br />
-              CIN: U29299PN2000PTC15590<br />
-              27/4/2, Dhayari-Narhe Rd,<br />
-              Dhayari, Pune, Maharashtra 411041
+            Yantrashilpa Technologies Pvt. Ltd., Phase-2
+            <br />
+            27/4/2, Dhayari-Narhe Rd,
+            <br />
+            Dhayari, Pune, Maharashtra 411041
           </p>
         </div>
-
       </div>
 
       {/* Embedded Map */}
@@ -58,7 +80,6 @@ const ContactPage: React.FC = () => {
           loading="lazy"
         ></iframe>
       </div>
-
     </div>
   );
 };
