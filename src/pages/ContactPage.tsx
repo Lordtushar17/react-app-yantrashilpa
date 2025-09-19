@@ -27,8 +27,10 @@ const ContactPage: React.FC = () => {
       </div>
 
       {/* Info Boxes */}
-      <div className="w-full max-w-5xl grid grid-cols-1 md:grid-cols-3 gap-8 mt-6">
-        <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition font-bold">
+            {/* Info Boxes */}
+      <div className="w-full max-w-5xl mt-6 flex flex-col gap-8">
+        {/* Email (top, full width) */}
+        <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition font-bold ">
           <h2 className="text-2xl md:text-3xl font-bold mb-2 text-orange-500 text-center ">
             Email
           </h2>
@@ -46,27 +48,33 @@ const ContactPage: React.FC = () => {
           </p>
         </div>
 
-        <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition text-center font-bold">
-          <h2 className="text-2xl md:text-3xl font-bold mb-2 text-orange-500 text-center">
-            Phone
-          </h2>
-          <p className="text-gray-700 text-lg">+91 98765 43210</p>
-          <p className="text-gray-700 text-lg">+91 91234 56789</p>
-        </div>
+        {/* Bottom row: Phone (big) + Address (small) */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Phone - left, bigger (2/3) */}
+          <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition text-center font-bold md:col-span-2">
+            <h2 className="text-2xl md:text-3xl font-bold mb-2 text-orange-500 text-center">
+              Phone Numbers
+            </h2>
+            <p className="text-gray-700 text-lg">+91 98765 43210</p>
+            <p className="text-gray-700 text-lg">+91 91234 56789</p>
+          </div>
 
-        <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition">
-          <h2 className="text-2xl md:text-3xl font-bold mb-2 text-orange-500 text-center">
-            Address
-          </h2>
-          <p className="text-gray-700 text-lg text-center font-bold">
-            Yantrashilpa Technologies Pvt. Ltd., Phase-2
-            <br />
-            27/4/2, Dhayari-Narhe Rd,
-            <br />
-            Dhayari, Pune, Maharashtra 411041
-          </p>
+          {/* Address - right, smaller (1/3) */}
+          <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition ">
+            <h2 className="text-2xl md:text-3xl font-bold mb-2 text-orange-500 text-center">
+              Address
+            </h2>
+            <p className="text-gray-700 text-lg text-center font-bold">
+              Yantrashilpa Technologies Pvt. Ltd., Phase-2
+              <br />
+              27/4/2, Dhayari-Narhe Rd,
+              <br />
+              Dhayari, Pune, Maharashtra 411041
+            </p>
+          </div>
         </div>
       </div>
+
 
       {/* Embedded Map */}
       <div className="w-full max-w-5xl mt-12 rounded-lg overflow-hidden shadow-lg">

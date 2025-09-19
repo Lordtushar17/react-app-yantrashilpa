@@ -34,7 +34,7 @@ const products: Product[] = [
       "Fuel Conditioning System to maintain temperature, flow rate, and pressure of fuel supplied to the engine.",
     description:
       "The ‘Fuel Conditioning System’ is aimed to maintain the temperature, flow rate, and pressure of the fuel going to the feed pump of the engine constant at a set value. The system controls the temperature of fuel supplied to the engine either by indirect cooling or by heating it. The fuel coming from the main supply line is added to the fuel from the return line of the engine and passes through a heat exchanger coil. A process controller maintains the desired temperature, pressure (and thus flow) of fuel. Thereafter this fuel at the set temperature is supplied to the engine feed pump. The fuel going to the engine feed pump is always in excess. Hence this excess fuel is bypassed and sent to the air separator along with the return line fuel coming from the engine.",
-    images: ["/product-images/FCS 5.webp", "/product-images/FCS 14.png"],
+    images: ["/product-images/FCS 5.webp", "/product-images/FCS 14.png", "/product-images/FCS combined.png"],
   },
   {
     id: 4,

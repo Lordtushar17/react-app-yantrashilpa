@@ -7,7 +7,7 @@ type HeroSectionProps = {
 };
 
 export default function HeroSection({
-  images = ["/images/group photo 3.jpg", "/images/hero section 1.jpg", "/images/hero section 2.jpg", "/images/hero section 3.jpg", "/images/company-photo-2.jpg", "/images/Award-photo.jpg"],
+  images = ["/images/group photo 3.webp", "/images/hero section 1.webp", "/images/hero section 2.webp", "/images/hero section 3.webp", "/images/company-photo-2.webp", "/images/Award-photo.webp"],
   autoPlay = true,
   autoPlayInterval = 4000,
 }: HeroSectionProps) {
