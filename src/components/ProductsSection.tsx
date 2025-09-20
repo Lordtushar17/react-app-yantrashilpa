@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const ProductsSection = () => {
   return (
@@ -37,11 +37,13 @@ const ProductsSection = () => {
             <h3 className="text-xl font-bold text-black mb-4">Coolant Conditioning System</h3>
             <div className="flex flex-col">
               <div className="w-full mx-auto mb-4">
-                <img
-                  src="/images/CCS 10.png"
-                  alt="Coolant Conditioning System"
-                  className="w-full h-48 object-contain rounded-lg"
-                />
+                <NavLink to="/products">
+                  <img
+                    src="/product-images/CCS 10.webp"
+                    alt="Coolant Conditioning System"
+                    className="w-full h-48 object-contain rounded-lg"
+                  />
+                </NavLink>
               </div>
               <p>
                 The “Coolant Conditioning System” is aimed to provide coolant at controlled
@@ -55,11 +57,13 @@ const ProductsSection = () => {
             <h3 className="text-xl font-bold text-black mb-4">Charged Air Control System</h3>
             <div className="flex flex-col">
               <div className="w-full mx-auto mb-4">
-                <img
-                  src="/images/CACS 3.png"
+                <NavLink to="/products">
+                  <img
+                  src="/product-images/CACS 3.webp"
                   alt="Charged Air Control System"
                   className="w-full h-48 object-contain rounded-lg"
-                />
+                  />
+                </NavLink>
               </div>
               <p>
                 The “Charged Air Control System” is designed to maintain or control temperature &
@@ -73,11 +77,13 @@ const ProductsSection = () => {
             <h3 className="text-xl font-bold text-black mb-4">Fuel Conditioning System</h3>
             <div className="flex flex-col">
               <div className="w-full mx-auto mb-4">
-                <img
-                  src="/images/FCS 5.png"
+                <NavLink to="/products">
+                  <img
+                  src="/product-images/FCS 5.webp"
                   alt="Fuel Conditioning System"
                   className="w-full h-48 object-contain rounded-lg"
-                />
+                  />
+                </NavLink>
               </div>
               <p>
                 The ‘Fuel Conditioning System’ is aimed to maintain temperature, flow rate and
