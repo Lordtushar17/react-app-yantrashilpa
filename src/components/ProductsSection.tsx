@@ -7,7 +7,7 @@ const ProductsSection = () => {
       id="products"
       className="relative py-16 sm:py-24 md:py-32 mx-4 my-8 rounded-2xl overflow-hidden bg-fixed"
       style={{
-        backgroundImage: "url('/images/Filter.jpg')", // <- replace with your bg image
+        backgroundImage: "url('/images/counter-bg.webp')", // <- replace with your bg image
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
@@ -31,7 +31,7 @@ const ProductsSection = () => {
         </div>
 
         {/* Products Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-6xl mx-auto px-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 max-w-7xl mx-auto px-4">
           {/* Product Card 1 */}
           <div className="bg-white p-6 rounded-lg shadow-[0_4px_12px_rgba(0,0,0,0.25)] hover:shadow-[0_6px_20px_rgba(0,0,0,0.35)] transition-all duration-300 border-2 border-transparent hover:border-blue-700 flex flex-col">
             <h3 className="text-xl font-bold text-black mb-4">Coolant Conditioning System</h3>
@@ -88,6 +88,25 @@ const ProductsSection = () => {
               <p>
                 The ‘Fuel Conditioning System’ is aimed to maintain temperature, flow rate and
                 pressure of the fuel going to feed pump of the engine constant at set value.
+              </p>
+            </div>
+          </div>
+
+          {/* Product Card 4 */}
+          <div className="bg-white p-6 rounded-lg shadow-[0_4px_12px_rgba(0,0,0,0.25)] hover:shadow-[0_6px_20px_rgba(0,0,0,0.35)] transition-all duration-300 border-2 border-transparent hover:border-blue-700 flex flex-col">
+            <h3 className="text-xl font-bold text-black mb-4">Thermal Shock System</h3>
+            <div className="flex flex-col">
+              <div className="w-full mx-auto mb-4">
+                <NavLink to="/products">
+                  <img
+                  src="/product-images/TSS 5.webp"
+                  alt="Fuel Conditioning System"
+                  className="w-full h-48 object-contain rounded-lg"
+                  />
+                </NavLink>
+              </div>
+              <p>
+                Thermal Shock System to deliver hot and cold coolant cycles for durability testing of engines.
               </p>
             </div>
           </div>

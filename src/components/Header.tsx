@@ -9,19 +9,19 @@ const Header: React.FC = () => {
         <div className="flex items-center space-x-6">
           {/* Logo (click navigates to homepage) */}
           <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-            <img src="/footer-logo.png" alt="Yantrashilpa Logo" className="h-10 w-auto cursor-pointer" />
+            <img src="/header section last.png" alt="Yantrashilpa Logo" className="h-10 w-auto cursor-pointer" />
           </Link>
 
           {/* Contact info (hidden on small screens) */}
-          <div className="hidden md:flex space-x-4 text-sm text-gray-300">
+          {/* <div className="hidden md:flex space-x-4 text-sm text-gray-300">
             <span>📧 info@yantrashilpa.com</span>
             <span>📞 +91 9112211150</span>
-          </div>
+          </div> */}
         </div>
 
         {/* Right side - Navigation */}
         <nav>
-          <ul className="flex space-x-6 text-sm font-medium">
+          <ul className="flex space-x-10 text-lg font-medium">
             <li>
               <NavLink
                 to="/"

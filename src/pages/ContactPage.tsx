@@ -28,30 +28,43 @@ const ContactPage: React.FC = () => {
 
       {/* Info Boxes */}
             {/* Info Boxes */}
-      <div className="w-full max-w-5xl mt-6 flex flex-col gap-8">
+      <div className="w-full max-w-5xl mt-6 flex flex-col gap-8 ">
         {/* Email (top, full width) */}
-        <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition font-bold ">
-          <h2 className="text-2xl md:text-3xl font-bold mb-2 text-orange-500 text-center ">
+        <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition font-bold">
+        {/* Header */}
+        <h2 className="text-2xl md:text-3xl font-bold mb-6 text-orange-500 text-center">
             Email
-          </h2>
-          <p className="text-gray-700 text-lg">
-            New System - info@yantrashilpa.com
-          </p>
-          <p className="text-gray-700 text-lg">
-            Support for Existing Systems - support@yantrashilpa.com
-          </p>
-          <p className="text-gray-700 text-lg">
-            Spares - dispatch@yantrashilpa.com
-          </p>
-          <p className="text-gray-700 text-lg">
-            Carrers - hr@yantrashilpa.com
-          </p>
-        </div>
+        </h2>
 
-        {/* Bottom row: Phone (big) + Address (small) */}
+        {/* Three sections */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+          {/* Left */}
+          <div className="p-4 border rounded-lg shadow-sm hover:shadow-md transition">
+            <h3 className="text-lg font-bold mb-2 text-gray-900">New Systems</h3>
+                <p className="text-black text-lg font-normal">info@yantrashilpa.com</p>
+          </div>
+
+          {/* Centre */}
+          <div className="p-4 border rounded-lg shadow-sm hover:shadow-md  transition">
+            <h3 className="text-lg font-bold mb-2 text-gray-900">
+              Support for Existing Systems
+            </h3>
+              <p className="text-black text-lg font-normal">support@yantrashilpa.com</p>
+          </div>
+
+          {/* Right */}
+          <div className="p-4 border rounded-lg shadow-sm hover:shadow-md transition">
+          <h3 className="text-lg font-bold mb-2 text-gray-900">Spares</h3>
+            <p className="text-black text-lg font-normal">dispatch@yantrashilpa.com</p>
+          </div>
+        </div>
+      </div>
+
+
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Phone - left, bigger (2/3) */}
-          <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition text-center font-bold md:col-span-2">
+   
+          {/* <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition text-center font-bold md:col-span-2">
             <h2 className="text-2xl md:text-3xl font-bold mb-2 text-orange-500 text-center">
               Phone Numbers
             </h2>
@@ -59,7 +72,6 @@ const ContactPage: React.FC = () => {
             <p className="text-gray-700 text-lg">+91 91234 56789</p>
           </div>
 
-          {/* Address - right, smaller (1/3) */}
           <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition ">
             <h2 className="text-2xl md:text-3xl font-bold mb-2 text-orange-500 text-center">
               Address
@@ -71,7 +83,7 @@ const ContactPage: React.FC = () => {
               <br />
               Dhayari, Pune, Maharashtra 411041
             </p>
-          </div>
+          </div> */}
         </div>
       </div>
 
