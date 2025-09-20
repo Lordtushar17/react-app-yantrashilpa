@@ -38,10 +38,10 @@ const ContactPage: React.FC = () => {
             New System - info@yantrashilpa.com
           </p>
           <p className="text-gray-700 text-lg">
-            Support and Existing Systems - support@yantrashilpa.com
+            Support for Existing Systems - support@yantrashilpa.com
           </p>
           <p className="text-gray-700 text-lg">
-            Sparse - dispatch@yantrashilpa.com
+            Spares - dispatch@yantrashilpa.com
           </p>
           <p className="text-gray-700 text-lg">
             Carrers - hr@yantrashilpa.com

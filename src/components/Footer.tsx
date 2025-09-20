@@ -48,22 +48,24 @@ const Footer: React.FC = () => {
   <div className="mb-8 md:mb-0 md:w-1/1 flex flex-col space-y-2 text-sm ">
     {/* Phone Numbers Box */}
     <div className="bg-gray-800 p-3 rounded-md shadow-sm">
-      <p>Phone: +91-9112211150</p>
-      <p>Phone: +91-9112211140</p>
+      <p className="font-semibold">Phone: +91-9112211150</p>
+      <p className="font-semibold">Phone: +91-9112211140</p>
     </div>
 
     {/* Email IDs Box */}
     <div className="bg-gray-800 p-3 rounded-md shadow-sm ">
-      <p>Email: info@yantrashilpa.com</p>
-      <p>Email: support@yantrashilpa.com</p>
+      <p className="font-semibold">Email: info@yantrashilpa.com</p>
+      <p className="font-semibold">Email: support@yantrashilpa.com</p>
     </div>
   </div>
 
   {/* Right: Working Hours & Social Links */}
   <div className="md:w-1/3 text-sm">
-    <h3 className="text-xl font-semibold mb-2">Working Hours</h3>
-    <p>Sunday - Saturday: 8:30 am to 5 pm</p>
-    <p>Thursday: Off</p>
+    <h3 className="text-3xl font-bold mb-2">Address</h3>
+    <p className="font-semibold">Yantrashilpa Technologies Pvt. Ltd., Phase-2</p>
+    <p className="font-semibold">27/4/2, Dhayari-Narhe Rd,
+      Dhayari, Pune,</p>
+    <p className="font-semibold">Maharashtra 411041</p>
 
     <div className="flex mt-4 space-x-4 text-2xl">
       

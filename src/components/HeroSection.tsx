@@ -97,10 +97,11 @@ export default function HeroSection({
           pauseRef.current = false;
         }}
       >
-        <h1 className="text-5xl md:text-8xl lg:text-8xl font-bold text-orange-500">
+        <h1 className="text-5xl md:text-8xl lg:text-8xl font-bold text-orange-100/50 [-webkit-text-stroke:2px_black]"
+          style={{ fontFamily: "ERASB, sans-serif" }}>
           Yantrashilpa
         </h1>
-
+  
         <div className="max-w-3xl">
           <h2
             className="text-2xl md:text-3xl lg:text-4xl text-white font-bold drop-shadow-[0_0_10px_white]"

@@ -43,7 +43,7 @@ const products: Product[] = [
       "Thermal Shock System to deliver hot and cold coolant cycles for durability testing of engines.",
     description:
       "The “Thermal Shock System” is aimed to provide hot and cold temperature shocks to the engine coolant gallery. There are three cycles to supply coolant to the engine: Hot, Cold, and CCS (coolant through the coolant conditioning system). These cycles can be defined (for duration, temperature, and sequence) and programmed by the control panel. In the Hot cycle, hot coolant from the hot seizure module of the system is circulated through the engine. In the Cold cycle, cold or chilled coolant from the cold seizure module of the system is circulated through the engine. In the CCS cycle, coolant from the CCS at intermediate temperature (maintained by the CCS) is circulated through the engine.",
-    images: ["/product-images/TSS 1.webp", "/product-images/TSS 5.webp"],
+    images: ["/product-images/TSS 5.webp", "/product-images/TSS 1.webp" ],
   },
   {
     id: 5,

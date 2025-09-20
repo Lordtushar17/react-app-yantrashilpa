@@ -2,8 +2,8 @@ import React from "react";
 
 const stats = [
   { number: "1500+", label: "Systems Installed" },
-  { number: "50+", label: "Happy Clients" },
-  { number: "30", label: "Designs & Patents" },
+  { number: "100+", label: "Happy Clients" },
+  { number: "30+", label: "Designs & Patents" },
 ];
 
 const StatsSection = () => {
